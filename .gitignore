@@ -1,7 +1,27 @@
+# data + model artifacts (usually too large / generated)
 data/
 artifacts/
 
+# Python junk
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
+# environments
 .venv/
+venv/
+env/
+.env
+
+# OS / editor
 .DS_Store
+.vscode/
+.idea/
+
+# test / build outputs
+.pytest_cache/
+.coverage
+dist/
+build/
+*.egg-info/

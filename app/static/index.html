@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MNIST Draw Demo</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Draw a digit (0–9)</h1>
+
+    <div class="row">
+      <div class="panel">
+        <h2>Draw</h2>
+        <canvas id="draw" width="280" height="280"></canvas>
+        <div class="buttons">
+          <button id="clear">Clear</button>
+          <button id="predict">Predict</button>
+        </div>
+        <p class="hint">Tip: draw in white. Use a thick stroke.</p>
+      </div>
+
+      <div class="panel">
+        <h2>Model output</h2>
+        <div id="pred" class="pred">Predicted: —</div>
+
+        <h3>Probabilities</h3>
+        <div id="probs" class="bars"></div>
+
+        <h3>28×28 input (what the model sees)</h3>
+        <canvas id="mini" width="140" height="140"></canvas>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Hidden layer (128 activations)</h2>
+      <div id="hidden" class="hidden-grid"></div>
+      <p class="hint">Each square lights up based on activation strength (after ReLU).</p>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
